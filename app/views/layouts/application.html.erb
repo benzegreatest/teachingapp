@@ -7,8 +7,47 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header>
+		<div class="col-xs-3">
+		<div class="circle">
+          <br />
+  Need 
+  <br />
+  Help
+  <br />
+ Editing?
+      </div>
+    </div>
+		</div>
+	    <div class="col-xs-4 slogan">
+			Giving Advice!
+		</div>
+    <div class="col-xs-5 links">
+      <%= link_to 'Contribute', '#' %>
+      <%= link_to 'About', '#' %>
+    </div>
 
-<%= yield %>
+	</header>
+<hr />
+	  <br class="clear" />
+
+
+	  <div class="container">
+    <%= yield %>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+       <div class="col-xs-6">
+        <%= link_to "This isn't enough, I need more", "#" %>
+      </div>
+  <div class="col-xs-6 footer-blurb">
+        Proudly built in California by <a href="http://thefirehoseproject.com">Me!</a><br />
+        Contact Us - <a href="mailto:benchinoy@hotmail.com">Learn how to code here</a>
+      </div>
+    </div>
+  </div>
+
 
 </body>
 </html>
