@@ -3,4 +3,27 @@ class TipsController < ApplicationController
 		@tip = Tip.order("RANDOM()").first
 	end
 
+	def new
+		@tip = Tip.new
+	end
+
+	def create
+		@tip = Tip.create(tip_params)
+		 if @tip.invalid?
+     		 flash[:error] = '<strong>Could not save</strong> the data you entered is invalid.'
+    	end
+		redirect_to root_path
+	end
+
+	private
+
+	def tip_params
+		params.require(:tip).permit(:name, :tip)
+	end
+
+	def about
+	end
+
+
+
 end

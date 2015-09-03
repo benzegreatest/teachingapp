@@ -1,5 +1,9 @@
 Teachingapp::Application.routes.draw do
   root 'tips#index'
+
+  resources :tips
+
+  get 'about', :to => 'quotes#about'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
